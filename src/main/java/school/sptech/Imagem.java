@@ -21,5 +21,29 @@ public class Imagem {
         return somaAreas;
     }
 
+    public List<Figura> buscarPorAreaMaiorQue20() {
+
+        List<Figura> areasMaiorVinte = new ArrayList<>();
+
+        for (Figura figura : figuras) {
+            if (figura.calcularArea() > 20) {
+                areasMaiorVinte.add(figura);
+            }
+        }
+
+        return areasMaiorVinte;
+    }
+
+    public List<Figura> buscarQuadrados() {
+        List<Figura> listaFiguras = new ArrayList<>();
+
+        for (Figura figura : figuras) {
+            if (figura instanceof Quadrado) {
+                listaFiguras.add(figura);
+            }
+        }
+
+        return listaFiguras;
+    }
 
 }
